@@ -1,0 +1,15 @@
+{
+  "name": "desafio-progressivo-frontend-dom-sass-m6-ddst18",
+  "version": "1.0.0",
+  "description": "**Nome do Aluno**: [Glaucus Junior]",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.81.0"
+  }
+}

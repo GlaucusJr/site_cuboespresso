@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <title>Cubospresso</title>
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/carrinho.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="./index.html">
+        <img src="./image/logo.svg" alt="logo cubospresso">
+      </a>
+      <a href="#" class="link__quantity" id="abrirCarrinho">
+        <img src="./image/Tote.svg" alt="Carrinho">
+        <span class="badge__quantity" id="quantidadeCarrinho">0</span>
+      </a>
+      <div id="carrinho" class="carrinho">
+        <div class="carrinho__header">
+          <h3>Seu carrinho</h3>
+          <div>
+            <span id="itensTotal">0</span>
+            <p class="carrinho__header--text">itens</p>
+            <button id="limparCarrinho" class="limpar_Carrinho">Excluir tudo</button>
+          </div>
+          <button id="fecharCarrinho" class="fechar-carrinho">
+            <img src="./image/X.svg" alt="Fechar">
+          </button>
+          
+        </div>
+
+        <div class="carrinho__itens" id="itensCarrinho"></div>
+
+        <div class="carrinho__resumo">
+          <div class="subtotal">
+            <span>Subtotal</span>
+            <span id="subtotalCarrinho">R$ 0,00</span>
+          </div>
+          <div class="entrega">
+            <span>Entrega</span>
+            <span>R$ 0,00</span>
+          </div>
+          <div class="total">
+            <span>Total</span>
+            <span id="totalCarrinho">R$ 0,00</span>
+          </div>
+        </div>
+
+        <button class="finalizar-compra" id="finalizarCompra">Finalizar compra</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container product__container">
+      <a href="./index.html" class="product__link">Voltar para o início</a>
+      <section class="product">
+        <div class="product__container--image">
+          <img src="./image/product-01.png" class="product__image" alt="produto 1">
+        </div>
+        <div class="product__data">
+          <h1 class="product__title">Café Espresso</h1>
+          <h2 class="product__price">R$ 0,00</h2>
+          <div class="product__tag">
+            <img src="./image/Plant.png" alt="planta">
+            <span>Vegano</span>
+          </div>
+          <p class="product__description">
+            Imagine um café espresso como um abraço acolhedor em uma xícara. Com sua cor profunda e rica, ele é o convite perfeito para um momento de pausa. O aroma intenso que sobe suavemente é como um caloroso cumprimento, prometendo um instante de prazer e concentração. Ao dar o primeiro gole, a textura aveludada e o sabor robusto envolvem o paladar, oferecendo um equilíbrio encantador entre a doçura e a leve amargura. É um prazer pequeno, mas incrivelmente satisfatório, ideal para um rápido reequilíbrio durante o dia. Cada xícara é uma pausa deliciosa, um momento só seu, para recarregar e seguir em frente com renovada energia e tranquilidade.
+          </p>
+          <form>
+            <section class="product__observation">
+              <label for="observation">Observações sobre o pedido</label>
+              <textarea rows="3" name="observation" id="observation" placeholder="Digite suas observações. Ex.: Enviar açúcar"></textarea>
+            </section>
+            <div class="product__buy">
+              <section class="product__quantity">
+                <button class="product__quantity--minus">
+                  <img src="./image/Minus.svg" alt="mais um">
+                </button>
+                <input type="text" class="product__quantity--input" value="1">
+                <button class="product__quantity--plus">
+                  <img src="./image/Plus.svg" alt="menos um">
+                </button>
+              </section>
+              <button class="product__button">
+                Comprar
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="./js/product.js"></script>
+  <script src="./js/carrinho.js"></script>
+  <footer class="footer">
+    <section class="container">
+      <img src="./image/logo-02.svg" alt="logo cubospresso">
+      <div class="footer__list">
+        <div class="footer__list--item">
+          <h3>Classicos</h3>
+          <ul>
+            <li>Espresso</li>
+            <li>Americano</li>
+            <li>Cappuccino</li>
+            <li>Latte</li>
+            <li>Macchiato</li>
+            <li>Mocha</li>
+            <li>Irish Coffee</li>
+          </ul>
+        </div>
+        <div class="footer__list--item">
+          <h3>Gelados</h3>
+          <ul>
+            <li>Cold Brew</li>
+            <li>Frappuccino</li>
+            <li>Laranja e tônica</li>
+            <li>Milk shake</li>
+          </ul>
+        </div>
+        <div class="footer__list--item">
+          <h3>Veganos</h3>
+          <ul>
+            <li>Espresso</li>
+            <li>Americano</li>
+            <li>Cold Brew</li>
+            <li>Irish Coffee</li>          
+          </ul>
+        </div>
+      </div>
+    </section>
+  </footer>
+</body>
+</html>
