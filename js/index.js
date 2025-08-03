@@ -57,22 +57,13 @@
 //   carregarCarrinho()
   
 
+// js/index.js
 const classicosContainer = document.getElementById("clássicos-container")
 const geladosContainer = document.getElementById("gelados-container")
 
-const SUPABASE_URL = 'https://zrqfqigboekporcfhrlf.supabase.co'
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpycWZxaWdib2VrcG9yY2ZocmxmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQyMzQ2OTQsImV4cCI6MjA2OTgxMDY5NH0.9nImNPFq-OWPWSOEtv1yJuBl68BJucCuU7jpGmyqCtY'
-
 async function carregarProdutos() {
   try {
-    const resposta = await fetch(`${SUPABASE_URL}/rest/v1/produtos`, {
-      headers: {
-        apikey: SUPABASE_KEY,
-        Authorization: `Bearer ${SUPABASE_KEY}`
-      }
-    })
-
-    const produtos = await resposta.json()
+    const produtos = await buscarProdutos()
 
     produtos.forEach(produto => {
       const container = produto.categoria === "clássicos" ? classicosContainer : geladosContainer
@@ -99,4 +90,5 @@ async function carregarProdutos() {
   }
 }
 
-carregarProdutos()
+document.addEventListener("DOMContentLoaded", carregarProdutos)
+
