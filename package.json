@@ -1,7 +1,7 @@
 {
-  "name": "desafio-progressivo-frontend-dom-sass-m6-ddst18",
+  "name": "Site CuboEspresso",
   "version": "1.0.0",
-  "description": "**Nome do Aluno**: [Glaucus Junior]",
+  "description": "Glaucus Junior",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
